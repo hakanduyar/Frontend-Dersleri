@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Head etiketine herzaman space boşluk koy ki html in child'ı olduğu anlaşılsın-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site başlığı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      a {
+        text-decoration: none; /* linkin altındaki çizgiyi kaldırdık */
+      }
+      a:hover {
+        text-decoration: underline; /* imleç linkin üzerine gelince altında çizgi gözükür */
+        color: tomato;
+      }
+      a:visited {
+        color: yellow; /* tıkladıklarımızın rengini sarıya çevirir */
+      }
+      a:link {
+        color: orangered; /* tıklanmayanları orangered yapar */
+      }
+      h1 {
+        /* şuan h1 yani ana başlık üzerinde oynama yapıyoruz */
+        color: red; /* yazının rengini kırmızı yaptık */
+        font-size: 48px; /* yazının boyutunu 12px yaptık */
+      }
+      h2 {
+        font-size: 32px;
+        color: blueviolet;
+        width: 500px; /* uzunluk */
+        /* max-width: 600px; ekranı daraltınca küçülüyor fakat büyütünce maks 600px yapıyor */
+        /* min-width: 300px; minimum 300px'e kadar küçülüyor */
+        height: 50px; /* yükseklik */
+        box-sizing: border-box; /* height ve width'e verdiğim değere ek olarak borderın eklenmesini engelliyor. 
+                                                                                    Direk verdiğim değer oluyor */
+
+        /* border-style: solid; h2 nin etrafına çerçeve yaptı k */
+        /* border-color: brown; çerçevenin rengini brown yaptık */
+        /* border-width: 5px; border'ın kalınlığını 5px yaptık */
+        border: 5px solid brown; /* yukarıdaki 3 özelliği tek satır ile yaptık */
+        border-radius: 10px; /* border'ın köşelerini yuvarlak yaptık */
+
+        margin: 0px; /* margin dış boşluklar demek, negatif olabilir */
+        /* margin-left: 10px;  border'a soldan 10px boşluk koyduk */
+        /* margin-right: 10px;  border'a sağdan 10px boşluk koyduk */
+        /* margin-bottom: 10px;  border'a aşağıdan 10px boşluk koyduk */
+        /* margin-top: 10px;  border'a yukarıdan 10px boşluk koyduk */
+        margin: 10px; /*sağ, sol, yukarı aşağı hepsine aynı değeri verir */
+
+        /* margin: 10px 20px; yukarı ve aşağı 10px, sağa ve sola 20px boşluk verir */
+        /* margin: 10px 20px 30px; yukarıya 10px, sağa ve sola 20px, aşağıya 30px verir */
+        /* margin: 10px 20px 30px 5px; yukarıya 10px, sağa 20px, aşağıya 30px, sola 5px */
+
+        padding: 5px; /* padding iç boşluklar demek, mutlaka pozitif olmak zorunda */
+
+        text-align: start; /* yazının hangi taraftan başlayacağına karar verir, arapça gibi diller ile de uyumlu olması için left değil start yapıyoruz */
+        text-decoration: line-through; /* yazının üstünü çizdik */
+        text-transform: uppercase; /* tüm harfleri büyük harfe çevirir */
+        letter-spacing: 10px; /* harflerin arasına 10px boşluk koyduk */
+        text-shadow: 3px 2px lightgray; /* metne gölge veriyor, 3px sağa, 2px sola */
+
+        font-family: "Roboto", sans-serif; /* yazı tipini roboto sans-serif yaptık */
+        font-weight: bold; /* yazıyı kalınlaştırdık */
+
+        /*display: none; h2'yi görünmez yaptık */
+      }
+
+      p {
+        /*height: 380px; */
+        color: bisque;
+
+        background-image: url("assets/images/gorsel.jpg"); /*arka plana resim koyduk*/
+        background-repeat: no-repeat; /*arka planın tekrarlamasını engelledik*/
+        /*background-attachment: fixed;  scroll ile beraber arka plan kaymıyor*/
+        /* background-color: purple;  yazının arkaplan rengini purple yaptık */
+
+        position: absolute; /* p'yi sayfada istediğimiz yere konumlandırıyoruz */
+        top: 10px;
+        right: 10px;
+        margin: 0px;
+        padding: 10px;
+        border-radius: 100px;
+        width: 70px;
+        height: 40px;
+        text-align: center;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Merhaba Dünya</h1>
+    <!--h1'e 1.seviye başlık diyebiliriz(heading 1)-->
+    <h2>Alt başlık</h2>
+    <!--h1'e göre daha alt başlık-->
+    <p>İlk HTML denemem</p>
+    <!--p paragraf demek-->
+    <a href="about.html">Hakkımda</a>
+    <a href="https://github.com/" target="_blank">Link</a>
+    <!--a link elementi demek-->
+    <a href="https://google.com/" target="_blank">Link</a>
+    <ol>
+      <li>Bir</li>
+      <li>İki</li>
+      <li>Üç</li>
+      <li>Dört</li>
+    </ol>
+    <div>
+      <div>
+        <div>
+          <img src="assets/images/gorsel.jpg" alt="logo" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
