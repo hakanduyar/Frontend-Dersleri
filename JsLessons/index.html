@@ -21,10 +21,14 @@
       var isim = "Ahmet";
       var soyisim = "Yılmaz";
       var tamisim = isim + " " + soyisim;
-      var yas = 25;
+      // var yas = "25" + "1";
+      var yas = 25 + 1;
+      // var buYil = 2023;
+      var buYil = new Date().getFullYear();
       console.log("Merhaba Dünya!");
       console.log(isim, soyisim);
       console.log(tamisim, yas);
+      console.log("Doğum yılı:", buYil - yas);
 
       //   function scrollFn() {
       //     if (window.pageYOffset > 100) {
