@@ -18,17 +18,25 @@
       </section>
     </main>
     <script>
-      let isim = "Ahmet";
+      // let isim = "Ahmet";
+      const isim = "Ahmet"; /*const değiştirelemez*/
       var soyisim = "Yılmaz";
       var tamisim = isim + " " + soyisim;
       // var yas = "25" + "1";
       var yas = 25 + 1;
       // var buYil = 2023;
       var buYil = new Date().getFullYear();
-      {
-        console.log("isim", isim);
-      }
+      // {
+      //   let isim = "Ahmet"; let sadece bloğun içinde çalışır. var ise blok dışında çalışmaya devam eder.
+      //   var isim = "Ahmet";
+      //   console.log("isim", isim);
+      // }
+      // isim = "Mehmet";
+      console.log("isim", isim);
       console.log("Merhaba Dünya!");
+      // console.log(2 ** 3); 2 üzeri 3 demek
+      // console.log(++yas); önce yaşı 1 arttır sonra ekrana yaz demek.
+      // console.log(yas++); önce yaşı ekrana yaz sonra 1 arttır demek.
       console.log(isim, soyisim);
       console.log(tamisim, yas);
       console.log("Doğum yılı:", buYil - yas);
