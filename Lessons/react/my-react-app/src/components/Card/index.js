@@ -1,9 +1,9 @@
 import "./Card.css";
-function Card(props) {
+function Card({ title, par }) {
   return (
     <div className="Card">
-      <h6>{props.title}</h6>
-      <p>{props.p}</p>
+      <h6>{title}</h6>
+      <p>{par}</p>
       <button>Devamı</button>
     </div>
   );
