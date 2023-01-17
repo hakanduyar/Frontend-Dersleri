@@ -13,8 +13,8 @@ function App() {
       <h1>Başlık</h1>
       <p>Başlangıç</p>
       <div className="Cards">
-        {arr.map(function (arr) {
-          return <Card title={arr[0]} par={arr[1]} />;
+        {arr.map(function ([title, par]) {
+          return <Card title={title} par={par} />;
         })}
       </div>
     </div>
