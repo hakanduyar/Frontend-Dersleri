@@ -17,9 +17,7 @@ let arr = [
   },
 ];
 
-const kare = (sayi) => {
-  return sayi * sayi;
-};
+const kare = (sayi) => sayi * sayi;
 
 const App = () => {
   console.log("Kare hesaplama", kare(5));
