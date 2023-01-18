@@ -17,21 +17,18 @@ let arr = [
   },
 ];
 
-const kare = (sayi) => sayi * sayi;
+// const kare = (sayi) => sayi * sayi;
 
-const App = () => {
-  console.log("Kare hesaplama", kare(5));
-  return (
-    <div>
-      <h1>Başlık</h1>
-      <p>Başlangıç</p>
-      <div className="Cards">
-        {arr.map(({ title, par }) => (
-          <Card par={par} title={title} />
-        ))}
-      </div>
+const App = () => (
+  <div>
+    <h1>Başlık</h1>
+    <p>Başlangıç</p>
+    <div className="Cards">
+      {arr.map(({ title, par }) => (
+        <Card par={par} title={title} />
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 export default App;
