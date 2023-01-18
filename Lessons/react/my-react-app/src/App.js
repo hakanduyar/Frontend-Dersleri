@@ -16,16 +16,24 @@ let arr = [
     par: "Açıklama 3",
   },
 ];
-const App = () => (
-  <div>
-    <h1>Başlık</h1>
-    <p>Başlangıç</p>
-    <div className="Cards">
-      {arr.map(({ title, par }) => (
-        <Card par={par} title={title} />
-      ))}
+
+function kare(sayi) {
+  return sayi * sayi;
+}
+
+const App = () => {
+  console.log(kare(5));
+  return (
+    <div>
+      <h1>Başlık</h1>
+      <p>Başlangıç</p>
+      <div className="Cards">
+        {arr.map(({ title, par }) => (
+          <Card par={par} title={title} />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default App;
