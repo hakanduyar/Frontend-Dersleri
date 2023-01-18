@@ -17,12 +17,12 @@ let arr = [
   },
 ];
 
-function kare(sayi) {
-  return sayi * sayi;
-}
+const kare = (sayi) => {
+  console.log(sayi * sayi);
+};
 
 const App = () => {
-  console.log(kare(5));
+  kare(5);
   return (
     <div>
       <h1>Başlık</h1>
