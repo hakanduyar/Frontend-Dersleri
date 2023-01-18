@@ -18,11 +18,11 @@ let arr = [
 ];
 
 const kare = (sayi) => {
-  console.log(sayi * sayi);
+  return sayi * sayi;
 };
 
 const App = () => {
-  kare(5);
+  console.log("Kare hesaplama", kare(5));
   return (
     <div>
       <h1>Başlık</h1>
