@@ -19,7 +19,7 @@ let arr = [
 
 // const kare = (sayi) => sayi * sayi;
 
-function App = () => (
+const App = () => (
   <div>
     <h1>Başlık</h1>
     <p>Başlangıç</p>
