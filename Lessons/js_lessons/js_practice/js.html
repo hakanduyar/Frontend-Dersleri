@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>My First JavaScript</h2>
+    <button
+      style="border: 5px solid red"
+      type="clickbutton"
+      on="document.getElementById('demo').innerHTML=Date()"
+    >
+      Click me to display Date and Time.
+    </button>
+    <p id="demo">Yazı denemesi</p>
+
+    <button
+      style="border: 5px solid red"
+      type="button"
+      onclick="document.write('JavaScript')"
+    >
+      Click me to display.
+    </button>
+    <br />
+    <br />
+    <button
+      style="border: 5px solid red"
+      type="button"
+      onclick="alert('Uyarı!')"
+    >
+      Click me to alert.
+    </button>
+    <br />
+    <br />
+    <button
+      style="border: 5px solid red"
+      type="button"
+      onclick="console.log('Uyarı!')"
+    >
+      Click me to console-alert.
+      <!--kendimize bir uyarı vermek istediğimizde kullanırız-->
+    </button>
+    <br />
+    <br />
+    <button
+      style="border: 5px solid red"
+      type="button"
+      onclick="document.getElementById('delete').style='display:none'"
+    >
+      Click me to delete.
+    </button>
+
+    <p id="delete">Bu yazı silinecek</p>
+    <br />
+    <br />
+    <button
+      style="border: 5px solid red"
+      type="button"
+      onclick="document.getElementById('write').style='display:block'"
+    >
+      Click me to write.
+    </button>
+
+    <p id="write" style="display: none">Bu yazı yazıldı</p>
+  </body>
+</html>
