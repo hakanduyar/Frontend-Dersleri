@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Card from "./components/Card";
+import { useState } from "react";
 
 let arr = [
   {
@@ -21,6 +22,7 @@ let arr = [
 
 const App = () => {
   // console.log("Kare hesaplama", kare(5));
+  const [val, setVal] = useState("Ders 11");
   return (
     <div>
       <h1>Başlık</h1>
