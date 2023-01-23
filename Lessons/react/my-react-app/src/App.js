@@ -27,7 +27,13 @@ const App = () => {
     <div>
       <h1>Başlık</h1>
       <h2>{val}</h2>
-      <button>Değiştir</button>
+      <button
+        onClick={() => {
+          setVal("Ders 12");
+        }}
+      >
+        Değiştir
+      </button>
       <p>Başlangıç</p>
       <div className="Cards">
         {arr.map(({ title, par }) => (
