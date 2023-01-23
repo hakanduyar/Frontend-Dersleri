@@ -26,6 +26,8 @@ const App = () => {
   return (
     <div>
       <h1>Başlık</h1>
+      <h2>{val}</h2>
+      <button>Değiştir</button>
       <p>Başlangıç</p>
       <div className="Cards">
         {arr.map(({ title, par }) => (
