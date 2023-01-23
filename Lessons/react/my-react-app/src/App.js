@@ -22,14 +22,14 @@ let arr = [
 
 const App = () => {
   // console.log("Kare hesaplama", kare(5));
-  const [val, setVal] = useState("Ders 11");
+  const [lesson, setLesson] = useState(11);
   return (
     <div>
       <h1>Başlık</h1>
-      <h2>{val}</h2>
+      <h2>Ders {lesson}</h2>
       <button
         onClick={() => {
-          setVal("Ders 12");
+          setLesson(lesson + 1);
         }}
       >
         Değiştir
