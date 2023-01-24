@@ -54,7 +54,7 @@ const App = () => {
       <p>Başlangıç</p>
       <div className="Cards">
         {arr.map(({ par, title }, i) => (
-          <Card key={"index" + i} par={par} title={title} />
+          <Card key={`index ${i}`} par={par} title={title} />
         ))}
       </div>
     </div>
