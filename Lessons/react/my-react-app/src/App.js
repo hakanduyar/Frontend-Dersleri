@@ -53,8 +53,8 @@ const App = () => {
       </button>
       <p>Başlangıç</p>
       <div className="Cards">
-        {arr.map(({ id, par, title }) => (
-          <Card key={id} par={par} title={title} />
+        {arr.map(({ par, title }, i) => (
+          <Card key={"index" + i} par={par} title={title} />
         ))}
       </div>
     </div>
