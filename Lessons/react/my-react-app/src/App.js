@@ -24,7 +24,7 @@ const App = () => {
   // console.log("Kare hesaplama", kare(5));
   const [lesson, setLesson] = useState(11);
   return (
-    <div>
+    <div onResize={() => console.log("resize oldu")}>
       <h1>Başlık</h1>
       <h2>Ders {lesson}</h2>
       <button
@@ -32,12 +32,26 @@ const App = () => {
           setLesson(lesson + 1);
         }}
       >
-        Değiştir
+        Ders arttır
+      </button>
+      <button
+        onClick={() => {
+          setLesson(lesson - 1);
+        }}
+      >
+        Ders azalt
+      </button>
+      <button
+        onClick={() => {
+          setLesson(100);
+        }}
+      >
+        Ders 100
       </button>
       <p>Başlangıç</p>
       <div className="Cards">
-        {arr.map(({ title, par }) => (
-          <Card par={par} title={title} />
+        {arr.map(({ par, title }) => (
+          <Card key={title} par={par} title={title} />
         ))}
       </div>
     </div>
