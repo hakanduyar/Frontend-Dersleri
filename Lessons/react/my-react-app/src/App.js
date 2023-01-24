@@ -5,14 +5,17 @@ import { useState } from "react";
 
 let arr = [
   {
+    id: 1,
     title: "Dağ 1",
     par: "Açıklama 1",
   },
   {
+    id: 2,
     title: "Dağ 2",
     par: "Açıklama 2",
   },
   {
+    id: 3,
     title: "Dağ 3",
     par: "Açıklama 3",
   },
@@ -50,8 +53,8 @@ const App = () => {
       </button>
       <p>Başlangıç</p>
       <div className="Cards">
-        {arr.map(({ par, title }) => (
-          <Card key={title} par={par} title={title} />
+        {arr.map(({ id, par, title }) => (
+          <Card key={id} par={par} title={title} />
         ))}
       </div>
     </div>
