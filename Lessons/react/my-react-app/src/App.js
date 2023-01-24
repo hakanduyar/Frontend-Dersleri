@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
@@ -54,7 +54,13 @@ const App = () => {
       <p>Başlangıç</p>
       <div className="Cards">
         {arr.map(({ par, title }, i) => (
-          <Card key={`index ${i}`} par={par} title={title} />
+          <Card
+            key={`index ${i}`}
+            par={par}
+            title={title}
+            lesson={lesson}
+            index={i}
+          />
         ))}
       </div>
     </div>
