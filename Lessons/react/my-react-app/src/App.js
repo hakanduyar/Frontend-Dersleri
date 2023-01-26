@@ -33,7 +33,7 @@ const App = () => {
       <Button>Deneme buton</Button>;
       <button
         onClick={() => {
-          setLesson(lesson + 1);
+          setLesson(lesson - 1);
         }}
       >
         Ders arttır
