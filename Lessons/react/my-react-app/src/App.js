@@ -1,4 +1,4 @@
-// import logo from "./logo.svg";
+import { Button } from "@mantine/core";
 import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
@@ -30,6 +30,7 @@ const App = () => {
     <div onResize={() => console.log("resize oldu")}>
       <h1>Başlık</h1>
       <h2>Ders {lesson}</h2>
+      <Button>Deneme buton</Button>;
       <button
         onClick={() => {
           setLesson(lesson + 1);
