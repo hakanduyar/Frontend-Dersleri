@@ -41,29 +41,6 @@ const App = () => {
       >
         Deneme buton
       </Button>
-      ;
-      <Button
-        onClick={() => {
-          setLesson(lesson - 1);
-        }}
-      >
-        Ders arttır
-      </Button>
-      <Button
-        onClick={() => {
-          setLesson(lesson - 1);
-        }}
-      >
-        Ders azalt
-      </Button>
-      <Button
-        onClick={() => {
-          setLesson(100);
-        }}
-      >
-        Ders 100
-      </Button>
-      <Checkbox label="I agree to sell my privacy" />
       <p>Başlangıç</p>
       <div className="Cards">
         {arr.map(({ par, title }, i) => (
