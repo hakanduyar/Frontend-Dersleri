@@ -11,7 +11,7 @@ const CardComponent = ({ title, par, lesson, index }) => (
     </Card.Section>
 
     <Group position="apart" mt="md" mb="xs">
-      <Text weight={500}>Norway Fjord Adventures</Text>
+      <Text weight={500}>{title}</Text>
       <Badge color="pink" variant="light">
         On Sale
       </Badge>
