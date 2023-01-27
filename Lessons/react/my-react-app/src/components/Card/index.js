@@ -18,8 +18,7 @@ const CardComponent = ({ title, par, lesson, index }) => (
     </Group>
 
     <Text size="sm" color="dimmed">
-      With Fjord Tours you can explore more of the magical fjord landscapes with
-      tours and activities on and around the fjords of Norway
+      {par}
     </Text>
 
     <Button variant="light" color="blue" fullWidth mt="md" radius="md">
