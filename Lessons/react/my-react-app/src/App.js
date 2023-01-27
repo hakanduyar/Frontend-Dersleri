@@ -1,4 +1,4 @@
-import { Button } from "@mantine/core";
+import { Button, Checkbox } from "@mantine/core";
 import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
@@ -19,6 +19,11 @@ let arr = [
     title: "Dağ 3",
     par: "Açıklama 3",
   },
+  {
+    id: 4,
+    title: "Dağ 4",
+    par: "Açıklama 4",
+  },
 ];
 
 // const kare = (sayi) => sayi * sayi;
@@ -30,28 +35,35 @@ const App = () => {
     <div onResize={() => console.log("resize oldu")}>
       <h1>Başlık</h1>
       <h2>Ders {lesson}</h2>
-      <Button>Deneme buton</Button>;
-      <button
+      <Button
+        variant="gradient"
+        gradient={{ from: "teal", to: "lime", deg: 105 }}
+      >
+        Deneme buton
+      </Button>
+      ;
+      <Button
         onClick={() => {
           setLesson(lesson - 1);
         }}
       >
         Ders arttır
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           setLesson(lesson - 1);
         }}
       >
         Ders azalt
-      </button>
-      <button
+      </Button>
+      <Button
         onClick={() => {
           setLesson(100);
         }}
       >
         Ders 100
-      </button>
+      </Button>
+      <Checkbox label="I agree to sell my privacy" />
       <p>Başlangıç</p>
       <div className="Cards">
         {arr.map(({ par, title }, i) => (
