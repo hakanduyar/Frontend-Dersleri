@@ -37,7 +37,7 @@ const App = () => {
       <h2>Ders {lesson}</h2>
       <Button
         variant="gradient"
-        gradient={{ from: "teal", to: "blue", deg: 60 }}
+        gradient={{ from: "teal", to: "lime", deg: 105 }}
       >
         Deneme buton
       </Button>
