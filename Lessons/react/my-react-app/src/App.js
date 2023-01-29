@@ -30,7 +30,7 @@ let arr = [
 
 const App = () => {
   // console.log("Kare hesaplama", kare(5));
-  const [lesson, setLesson] = useState(11);
+  const [lesson] = useState(11);
   return (
     <div onResize={() => console.log("resize oldu")}>
       <h1>Başlık</h1>
