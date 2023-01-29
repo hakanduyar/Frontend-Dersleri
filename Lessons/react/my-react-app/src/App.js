@@ -1,4 +1,4 @@
-import { Button, Checkbox } from "@mantine/core";
+import { Button } from "@mantine/core";
 import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
