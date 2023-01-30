@@ -1,4 +1,4 @@
-import { Button } from "@mantine/core";
+import { Button, Input, Textarea } from "@mantine/core";
 import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
@@ -33,15 +33,18 @@ const App = () => {
   const [lesson] = useState(11);
   return (
     <div onResize={() => console.log("resize oldu")}>
-      <h1>Başlık</h1>
-      <h2>Ders {lesson}</h2>
+      <h1>Kart oluşturma programı</h1>
+      <Input.Wrapper label="Input label">
+        <Input placeholder="Başlık yazınız" />
+      </Input.Wrapper>
+      <Textarea placeholder="Paragraf yazınız" label="Paragraf" withAsterisk />
       <Button
         variant="gradient"
         gradient={{ from: "teal", to: "lime", deg: 105 }}
       >
         Deneme buton
       </Button>
-      <p>Başlangıç</p>
+      <h2>Kartlar</h2>
       <div className="Cards">
         {arr.map(({ par, title }, i) => (
           <Card
