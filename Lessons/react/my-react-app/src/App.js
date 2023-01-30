@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div onResize={() => console.log("resize oldu")}>
       <h1>Kart oluşturma programı</h1>
-      <Input.Wrapper label="Input label">
+      <Input.Wrapper label="Başlık">
         <Input placeholder="Başlık yazınız" />
       </Input.Wrapper>
       <Textarea placeholder="Paragraf yazınız" label="Paragraf" withAsterisk />
