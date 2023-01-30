@@ -1,4 +1,4 @@
-import { Button, Input, Textarea } from "@mantine/core";
+import { Container, Stack, Button, Input, Textarea } from "@mantine/core";
 import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
@@ -30,23 +30,26 @@ let arr = [
 
 const App = () => {
   // console.log("Kare hesaplama", kare(5));
-  const [lesson] = useState(11);
+  const [list, setList] = useState(arr);
+  const [lesson, setLesson] = useState([]);
+  const click = () => {
+    console.log("Butona tıklandı");
+  };
   return (
-    <div onResize={() => console.log("resize oldu")}>
+    <Container>
       <h1>Kart oluşturma programı</h1>
-      <Input.Wrapper label="Başlık">
-        <Input placeholder="Başlık yazınız" />
-      </Input.Wrapper>
-      <Textarea placeholder="Paragraf yazınız" label="Paragraf" withAsterisk />
-      <Button
-        variant="gradient"
-        gradient={{ from: "teal", to: "lime", deg: 105 }}
-      >
-        Deneme buton
-      </Button>
+      <Stack>
+        <Input.Wrapper label="Başlık">
+          <Input placeholder="Başlık yazınız" />
+        </Input.Wrapper>
+        <Textarea placeholder="Paragraf yazınız" label="Paragraf" />
+        <Button variant="outline" onClick={click}>
+          Kart oluştur
+        </Button>
+      </Stack>
       <h2>Kartlar</h2>
       <div className="Cards">
-        {arr.map(({ par, title }, i) => (
+        {list.map(({ par, title }, i) => (
           <Card
             key={`index ${i}`}
             par={par}
@@ -56,7 +59,7 @@ const App = () => {
           />
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 
