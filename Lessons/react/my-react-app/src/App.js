@@ -3,35 +3,12 @@ import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
 
-let arr = [
-  {
-    id: 1,
-    title: "Dağ 1",
-    par: "Açıklama 1",
-  },
-  {
-    id: 2,
-    title: "Dağ 2",
-    par: "Açıklama 2",
-  },
-  {
-    id: 3,
-    title: "Dağ 3",
-    par: "Açıklama 3",
-  },
-  {
-    id: 4,
-    title: "Dağ 4",
-    par: "Açıklama 4",
-  },
-];
-
 // const kare = (sayi) => sayi * sayi;
 const App = () => {
   // console.log("Kare hesaplama", kare(5));
 
-  let name = "Hakan";
-  let isActive = true;
+  // let name = "Hakan";
+  // let isActive = true;
   let theMountain = {
     name: "Everest",
     height: 1000,
@@ -51,30 +28,47 @@ const App = () => {
       },
     ],
   };
-  let primeNumbers = [2, 3, 5, 7];
-  let names = ["Ahmet", "Mehmet", "Ali"];
-  let bools = [true, false, true];
-  let matrix = [
-    [1, 0, 0],
-    [0, 1, 0],
-    [0, 0, 1],
-  ];
+  // let primeNumbers = [2, 3, 5, 7];
+  // let names = ["Ahmet", "Mehmet", "Ali"];
+  // let bools = [true, false, true];
+  // let matrix = [
+  //   [1, 0, 0],
+  //   [0, 1, 0],
+  //   [0, 0, 1],
+  // ];
   // console.log(matrix[1][1]);
   console.log(theMountain.ways[0].wayName);
 
   const [title, setTitle] = useState("");
   const [paragraf, setParagraph] = useState("");
-  const [list, setList] = useState(arr);
+  const [list, setList] = useState([
+    {
+      id: 1,
+      title: "Dağ 1",
+      par: "Açıklama 1",
+    },
+    {
+      id: 2,
+      title: "Dağ 2",
+      par: "Açıklama 2",
+    },
+    {
+      id: 3,
+      title: "Dağ 3",
+      par: "Açıklama 3",
+    },
+  ]);
   const click = () => {
     setTitle("");
     setParagraph("");
-    const copyList = [...list];
-    copyList.push({
-      id: 5,
-      title,
-      par: paragraf,
-    });
-    setList(copyList);
+    setList([
+      {
+        id: 5,
+        title,
+        par: paragraf,
+      },
+      ...list /*...list ile listin kopyasını oluşturduk */,
+    ]);
   };
   return (
     <Container>
