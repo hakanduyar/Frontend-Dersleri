@@ -34,7 +34,8 @@ const App = () => {
   const [list, setList] = useState(arr);
   const [lesson, setLesson] = useState([]);
   const click = () => {
-    console.log("Butona tıklandı", title, paragraf);
+    setTitle("");
+    setParagraph("");
     const copyList = [...list];
     copyList.push({
       id: 5,
