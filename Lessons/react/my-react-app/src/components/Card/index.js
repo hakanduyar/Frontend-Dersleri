@@ -1,4 +1,4 @@
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
+import { Card, Image, Text, Button, Group } from "@mantine/core";
 
 const CardComponent = ({ title, par, lesson, index }) => (
   <Card shadow="sm" p="lg" radius="md" withBorder>

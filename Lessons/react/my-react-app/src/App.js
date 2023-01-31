@@ -29,10 +29,42 @@ let arr = [
 // const kare = (sayi) => sayi * sayi;
 const App = () => {
   // console.log("Kare hesaplama", kare(5));
+
+  let name = "Hakan";
+  let isActive = true;
+  let theMountain = {
+    name: "Everest",
+    height: 1000,
+    volcanicActivity: false,
+    mountain: {
+      name: "Mini tepe",
+      height: 2000,
+    },
+    ways: [
+      {
+        wayName: "north",
+        km: 3000,
+      },
+      {
+        wayName: "east",
+        km: 3000,
+      },
+    ],
+  };
+  let primeNumbers = [2, 3, 5, 7];
+  let names = ["Ahmet", "Mehmet", "Ali"];
+  let bools = [true, false, true];
+  let matrix = [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+  ];
+  // console.log(matrix[1][1]);
+  console.log(theMountain.ways[0].wayName);
+
   const [title, setTitle] = useState("");
   const [paragraf, setParagraph] = useState("");
   const [list, setList] = useState(arr);
-  const [lesson, setLesson] = useState([]);
   const click = () => {
     setTitle("");
     setParagraph("");
@@ -70,7 +102,7 @@ const App = () => {
       <Grid>
         {list.map(({ par, title }, i) => (
           <Grid.Col span={4} key={`index ${i}`}>
-            <Card par={par} title={title} lesson={lesson} index={i} />
+            <Card par={par} title={title} index={i} />
           </Grid.Col>
         ))}
       </Grid>
