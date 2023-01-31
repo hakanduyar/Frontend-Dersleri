@@ -3,42 +3,7 @@ import "./App.css";
 import Card from "./components/Card";
 import { useState } from "react";
 
-// const kare = (sayi) => sayi * sayi;
 const App = () => {
-  // console.log("Kare hesaplama", kare(5));
-
-  // let name = "Hakan";
-  // let isActive = true;
-  let theMountain = {
-    name: "Everest",
-    height: 1000,
-    volcanicActivity: false,
-    mountain: {
-      name: "Mini tepe",
-      height: 2000,
-    },
-    ways: [
-      {
-        wayName: "north",
-        km: 3000,
-      },
-      {
-        wayName: "east",
-        km: 3000,
-      },
-    ],
-  };
-  // let primeNumbers = [2, 3, 5, 7];
-  // let names = ["Ahmet", "Mehmet", "Ali"];
-  // let bools = [true, false, true];
-  // let matrix = [
-  //   [1, 0, 0],
-  //   [0, 1, 0],
-  //   [0, 0, 1],
-  // ];
-  // console.log(matrix[1][1]);
-  console.log(theMountain.ways[0].wayName);
-
   const [title, setTitle] = useState("");
   const [paragraf, setParagraph] = useState("");
   const [list, setList] = useState([
@@ -58,6 +23,14 @@ const App = () => {
       par: "Açıklama 3",
     },
   ]);
+
+  // const theMountain = {
+  //   id: 3,
+  //   title: "Dağ 3",
+  //   par: "Açıklama 3",
+  // };
+  // let { id, par } = theMountain;
+  // console.log(par);
   const click = () => {
     setTitle("");
     setParagraph("");
@@ -96,7 +69,17 @@ const App = () => {
       <Grid>
         {list.map(({ par, title }, i) => (
           <Grid.Col span={4} key={`index ${i}`}>
-            <Card par={par} title={title} index={i} />
+            <Card
+              par={par}
+              title={title}
+              i={i}
+              click={() => {
+                let copyList = [...list];
+                copyList.splice(i, 1);
+                setList(copyList);
+                console.log("Dışarıdan tıklanıldı");
+              }}
+            />
           </Grid.Col>
         ))}
       </Grid>
