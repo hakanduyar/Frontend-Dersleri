@@ -12,9 +12,9 @@ const CardComponent = ({ title, par, lesson, index }) => (
 
     <Group position="apart" mt="md" mb="xs">
       <Text weight={500}>{title}</Text>
-      <Badge color="pink" variant="light">
+      {/* <Badge color="pink" variant="light">
         On Sale
-      </Badge>
+      </Badge> */}
     </Group>
 
     <Text size="sm" color="dimmed">
