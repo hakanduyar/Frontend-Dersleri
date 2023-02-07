@@ -77,7 +77,6 @@ const App = () => {
                 let copyList = [...list];
                 copyList.splice(i, 1);
                 setList(copyList);
-                console.log("Dışarıdan tıklanıldı");
               }}
             />
           </Grid.Col>
